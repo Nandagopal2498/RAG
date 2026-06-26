@@ -1,13 +1,7 @@
-import os
 import time
 import streamlit as st
+import os
 from rag_chain import build_rag_chain, REFUSAL_MESSAGE
-
-st.set_page_config(page_title="Zyro Dynamics HR Assistant", page_icon="🏢")
-
-st.write("DEBUG - Key loaded:", bool(os.environ.get("GROQ_API_KEY")))   # <-- add this line, remove later
-
-st.title("🏢 Zyro Dynamics HR Assistant")
 
 st.set_page_config(page_title="Zyro Dynamics HR Assistant", page_icon="🏢")
 
