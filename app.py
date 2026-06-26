@@ -22,7 +22,15 @@ def load_chain():
 
 
 t0 = time.time()
-chain, retriever = load_chain()
+t0 = time.time()
+
+try:
+    chain, retriever = load_chain()
+except Exception as e:
+    st.error(str(e))
+    raise
+
+print(f"[TIMING] load_chain took {time.time() - t0:.2f}s")
 print(f"[TIMING] load_chain took {time.time() - t0:.2f}s")
 
 if "messages" not in st.session_state:
